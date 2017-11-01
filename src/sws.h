@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <sys/time.h>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -51,6 +52,13 @@ void swap_(int *a, int *b){
 
 void print_(int *a, int t){
     for(int i=0; i<t; i++)  cout << *(a+i) << " ";
+    cout << endl;
+}
+
+template<class T>
+void print(vector<T> const &v){
+    if(v.empty())   cout << "this vector is empty!";
+    for(unsigned i=0; i<v.size(); i++)  cout << v[i] << " ";
     cout << endl;
 }
 

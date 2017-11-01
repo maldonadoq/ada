@@ -82,7 +82,7 @@ void print_(vector<T> v){
 
 int main(int argc, char const *argv[]){
 	vector<int> v, w;
-	unsigned nt = 50000;
+	unsigned nt = 10000;
 	int rd;
 	srand(time(NULL));
 	for(unsigned t = 1000; t<=nt; t+=1000){
