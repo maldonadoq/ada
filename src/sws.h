@@ -5,7 +5,6 @@
 #include <time.h>
 #include <unistd.h>
 #include <sys/time.h>
-#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -60,6 +59,27 @@ void print(vector<T> const &v){
     if(v.empty())   cout << "this vector is empty!";
     for(unsigned i=0; i<v.size(); i++)  cout << v[i] << " ";
     cout << endl;
+}
+
+template<class T>
+void print_twod(vector<T> &v){
+    if(v.empty())   cout << "this vector is empty!";
+    for(unsigned i=0; i<v.size(); i++){
+        for(unsigned j=0; j<v[i].size(); j++)
+            cout << v[i][j] << " ";
+        cout << endl;
+    }
+    cout << endl;
+}
+
+template<class T>
+void print_graph(const T &G){
+    for(int i=0; i<G.l_adj.size(); i++){
+        cout << i << ": ";
+        for(int j=0; j<G.l_adj[i].size(); j++)
+            cout << G.l_adj[i][j].v << "|" << G.l_adj[i][j].p << "\t";
+        cout << endl;
+    }
 }
 
 #endif

@@ -43,8 +43,11 @@ vector<int> scan(){
 }
 
 int main(int argc, char const *argv[]){
-	vector<int> v = scan();
-	print(v);
+	//vector<int> v = scan();
+	//print(v);
+	cout << sizeof(int) << endl;
+	cout << sizeof(float) << endl;
+	cout << sizeof(double) << endl;
 	return 0;
 }
 
